@@ -75,11 +75,11 @@ def detect_people(frame, net, ln, personIdx=0):
 	# return the list of results
 	return results
 # load the COCO class labels our YOLO model was trained on
-labelsPath = "yolo-coco\\coco.names"
+labelsPath = "coco.names"
 LABELS = open(labelsPath).read().strip().split("\n")
 # derive the paths to the YOLO weights and model configuration
-weightsPath = "yolo-coco\\yolov3.weights"
-configPath = "yolo-coco\\yolov3.cfg"
+weightsPath = "yolov3.weights"
+configPath = "yolov3.cfg"
 # load our YOLO object detector trained on COCO dataset (80 classes)
 print("[INFO] loading YOLO from disk...")
 net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
